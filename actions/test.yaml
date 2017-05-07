@@ -1,0 +1,23 @@
+name: "test"
+runner_type: "python-script"
+description: "This action will test"
+enabled: true
+entry_point: "test.py"
+parameters:
+    chain1:
+        type: "string"
+        description: "Chain1."
+        required: true
+        position: 0
+    chain2:
+        type: "string"
+        description: "Chain2."
+        required: true
+        position: 1
+        secret: true
+    chain3:
+        type: "string"
+        description: "Chain3."
+        required: true
+        position: 2
+        default: "Chain3"
