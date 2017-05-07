@@ -9,8 +9,9 @@ from st2client.models import KeyValuePair
 
 class InternalDelIntf(Action):
 	def run(self, auth_user, auth_password, auth_project, auth_ip):
-		client = Client(base_url='http://localhost')
+		client = Client()
 		url = 'http://'+auth_ip+'/v3/auth/tokens'
+		print url
 		payload = { "auth": {'identity': {'methods': ['password'],'password': {'user': {'name': auth_user,'domain': { 'id': 'default' },'password': auth_password}}},'scope': {'project': {'name': auth_project,'domain': { 'id': 'default' }}}}}
 		try:
 			r=requests.post(url, data=json.dumps(payload))
