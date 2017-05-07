@@ -15,7 +15,7 @@ class InternalDelIntf(Action):
 		print json.dumps(payload)
 		try:
 			r=requests.post(url, data=json.dumps(payload))
-			print r.headers
+			print r
 			token=r.headers['X-Subject-Token']
 			print token
 			client.keys.update(KeyValuePair(name='token', value=token))
