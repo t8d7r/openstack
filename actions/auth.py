@@ -12,6 +12,7 @@ class InternalDelIntf(Action):
 		client = Client()
 		url = 'http://'+auth_ip+'/v3/auth/tokens'
 		payload = { "auth": {'identity': {'methods': ['password'],'password': {'user': {'name': auth_user,'domain': { 'id': 'default' },'password': auth_password}}},'scope': {'project': {'name': auth_project,'domain': { 'id': 'default' }}}}}
+		print payload
 		try:
 			r=requests.post(url, data=json.dumps(payload))
 			token=r.headers['X-Subject-Token']
