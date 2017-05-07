@@ -4,23 +4,23 @@ description: "This action will authenticate user, get token and populate keyvalu
 enabled: true
 entry_point: "auth.py"
 parameters:
-    user:
+    auth_user:
         type: "string"
         description: "Username"
         required: true
         position: 0
-    password:
+    auth_password:
         type: "string"
         description: "Password."
         required: true
         position: 1
         secret: true
-    project:
+    auth_project:
         type: "string"
         description: "Project."
         required: true
         position: 2
-    ip:
+    auth_ip:
         type: "string"
         description: "Adresse Openstack host."
         required: true

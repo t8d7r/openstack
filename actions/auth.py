@@ -8,10 +8,10 @@ from st2actions.runners.pythonrunner import Action
 from st2client.models import KeyValuePair
 
 class InternalDelIntf(Action):
-	def run(self, user, password, project, ip):
+	def run(self, auth_user, auth_password, auth_project, auth_ip):
 		client = Client(base_url='http://localhost')
-		url = 'http://'+ip+'/v3/auth/tokens'
-		payload = { "auth": {'identity': {'methods': ['password'],'password': {'user': {'name': user,'domain': { 'id': 'default' },'password': password}}},'scope': {'project': {'name': project,'domain': { 'id': 'default' }}}}}
+		url = 'http://'+auh_ip+'/v3/auth/tokens'
+		payload = { "auth": {'identity': {'methods': ['password'],'password': {'user': {'name': auth_user,'domain': { 'id': 'default' },'password': auth_password}}},'scope': {'project': {'name': auth_project,'domain': { 'id': 'default' }}}}}
 		try:
 			r=requests.post(url, data=json.dumps(payload))
 			token=r.headers['X-Subject-Token']
