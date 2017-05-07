@@ -1,0 +1,28 @@
+name: "auth"
+runner_type: "python-script"
+description: "This action will authenticate user, get token and populate keyvaluestore"
+enabled: true
+entry_point: "auth.py"
+parameters:
+    user:
+        type: "string"
+        description: "Username"
+        required: true
+        position: 0
+    password:
+        type: "string"
+        description: "Password."
+        required: true
+        position: 1
+        secret: true
+    project:
+        type: "string"
+        description: "Project."
+        required: true
+        position: 2
+    ip:
+        type: "string"
+        description: "Adresse Openstack host."
+        required: true
+        position: 3
+
