@@ -18,6 +18,10 @@ class InternalDelIntf(Action):
 			client.keys.update(KeyValuePair(name='token', value=token))
 			client.keys.update(KeyValuePair(name='user', value=user))
 			client.keys.update(KeyValuePair(name='project', value=project))
+			keys = client.keys.get_all()
+			print(client.keys.get_by_name(name='token'))
+			print(client.keys.get_by_name(name='user'))
+			print(client.keys.get_by_name(name='project'))
 			
 		except:
 			return(1)
