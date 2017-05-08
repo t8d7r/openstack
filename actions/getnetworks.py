@@ -20,7 +20,7 @@ class InternalDelIntf(Action):
 			print r
 			token=r.json()
 			length = len(token['networks'])
-			if serv_id == "default" :
+			if net_id == "default" :
 				while i < length :
 					print token['networks'][i]['name']+":id:"+token['networks'][i]['id']+":sub_id:"+token['networks'][i]['subnets'][0]
 					i = i + 1
