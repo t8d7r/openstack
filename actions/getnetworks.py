@@ -22,7 +22,7 @@ class InternalDelIntf(Action):
 			length = len(token['networks'])
 			if serv_id == "default" :
 				while i < length :
-						print token['networks'][i]['name']+":id:"+token['networks'][i]['id']+":sub_id:"+token['networks'][i]['subnets'][0]
+					print token['networks'][i]['name']+":id:"+token['networks'][i]['id']+":sub_id:"+token['networks'][i]['subnets'][0]
 					i = i + 1
 			else :
 				while i < length :
