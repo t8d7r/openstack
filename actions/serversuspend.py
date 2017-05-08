@@ -14,7 +14,7 @@ class InternalDelIntf(Action):
 		proj_id = client.keys.get_by_name(name='curr_project_id').value
 		curr_token = client.keys.get_by_name(name='curr_token').value
 		url = 'http://'+auth_ip+':8774/v2.1/'+proj_id+'/servers/'+serv_id+'/action'
-		payload = {'resume':'null'}
+		payload = { 'pause':'null'}
 		headers = {'X-Auth-Token': curr_token , 'Content-Type': 'application/json' }
 		try:
 			r=requests.post(url, data=json.dumps(payload), headers=headers)
