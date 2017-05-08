@@ -1,0 +1,19 @@
+name: "getsubnet"
+runner_type: "python-script"
+description: "This action will retrieve subnet"
+enabled: true
+entry_point: "getsubnet.py"
+parameters:
+    sub_id:
+        type: "string"
+        description: "id subnet"
+        required: true
+        position: 0
+        default: "default"
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 1
+
+
