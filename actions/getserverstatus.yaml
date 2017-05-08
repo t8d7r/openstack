@@ -1,0 +1,19 @@
+name: "getserverstatus"
+runner_type: "python-script"
+description: "This action will authenticate user, get token and populate keyvaluestore"
+enabled: true
+entry_point: "getserverstatus.py"
+parameters:
+    serv_id:
+        type: "string"
+        description: "id server"
+        required: true
+        position: 0
+        default: "default"
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 1
+
+
