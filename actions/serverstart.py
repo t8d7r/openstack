@@ -13,7 +13,7 @@ class InternalDelIntf(Action):
 		keys = client.keys.get_all()
 		proj_id = client.keys.get_by_name(name='curr_project_id')
 		curr_token = client.keys.get_by_name(name='curr_token')
-		url = 'http://'+auth_ip+':8774/v2.1/'+proj_id'/servers/'+serv_id+'/action'
+		url = 'http://'+auth_ip+':8774/v2.1/'+proj_id+'/servers/'+serv_id+'/action'
 		payload = { 'os-start':'null'}
 		headers = {'X-Auth-Token': curr_token.value , 'Content-Type': 'application/json' }
 		try:
