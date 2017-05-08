@@ -22,7 +22,7 @@ parameters:
         position: 2
     auth_ip:
         type: "string"
-        description: "Adresse Openstack host."
+        description: "Openstack host address."
         required: true
         position: 3
 
