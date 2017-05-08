@@ -8,7 +8,7 @@ from st2actions.runners.pythonrunner import Action
 from st2client.models import KeyValuePair
 
 class InternalDelIntf(Action):
-	def run(self, auth_ip):
+	def run(self, serv_id, auth_ip):
 		i = 0
 		client = Client()
 		keys = client.keys.get_all()
