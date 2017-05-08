@@ -19,6 +19,7 @@ class InternalDelIntf(Action):
 		url = 'http://'+auth_ip+'/v2.1/'+proj_id.value+'/servers'
 		print url+'\n'
 		headers = {'X-Auth-Token': curr_token.value }
+		print headers
 		try:
 			r = requests.get(url, headers=headers)
 			print r
