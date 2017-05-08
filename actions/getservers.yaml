@@ -10,10 +10,22 @@ parameters:
         required: true
         position: 0
         default: "default"
+    proj_id:
+        type: "string"
+        description: "id project"
+        required: true
+        position: 1
+        default: {{st2kv.system.curr_project_id}}
+    curr_token:
+        type: "string"
+        description: "id token"
+        required: true
+        position: 2
+        default: {{st2kv.system.curr_token}}
     auth_ip:
         type: "string"
         description: "Openstack host address."
         required: true
-        position: 1
+        position: 3
 
 
