@@ -1,0 +1,18 @@
+name: "serverpause"
+runner_type: "python-script"
+description: "This action will suspend server"
+enabled: true
+entry_point: "serverpause.py"
+parameters:
+    serv_id:
+        type: "string"
+        description: "Server id."
+        required: true
+        position: 0
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 1
+
+

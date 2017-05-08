@@ -1,0 +1,40 @@
+name: "servercreate"
+runner_type: "python-script"
+description: "This action will create server"
+enabled: true
+entry_point: "servercreate.py"
+parameters:
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 0
+    serv_name:
+        type: "string"
+        description: "Server name."
+        required: true
+        position: 1
+    secgrp_id:
+        type: "string"
+        description: "Security group id."
+        required: true
+        position: 2
+    flav_id:
+        type: "string"
+        description: "Flavor id."
+        required: true
+        position: 3
+    image_id:
+        type: "string"
+        description: "Image id."
+        required: true
+        position: 4
+    nets:
+        type: "array"
+        description: "Net id array, separate by comma."
+        required: true
+        position: 5
+
+
+
+

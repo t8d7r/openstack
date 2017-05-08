@@ -1,0 +1,19 @@
+name: "getimage"
+runner_type: "python-script"
+description: "This action will retrieve image"
+enabled: true
+entry_point: "getimage.py"
+parameters:
+    image_id:
+        type: "string"
+        description: "id server"
+        required: true
+        position: 0
+        default: "default"
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 1
+
+

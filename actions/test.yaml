@@ -5,19 +5,7 @@ enabled: true
 entry_point: "test.py"
 parameters:
     chain1:
-        type: "string"
+        type: "array"
         description: "Chain1."
         required: true
         position: 0
-    chain2:
-        type: "string"
-        description: "Chain2."
-        required: true
-        position: 1
-        secret: true
-    chain3:
-        type: "string"
-        description: "Chain3."
-        required: true
-        position: 2
-        default: "Chain3"
