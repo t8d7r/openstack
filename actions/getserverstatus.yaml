@@ -1,6 +1,6 @@
 name: "getserverstatus"
 runner_type: "python-script"
-description: "This action will authenticate user, get token and populate keyvaluestore"
+description: "This action will retrieve server status"
 enabled: true
 entry_point: "getserverstatus.py"
 parameters:

@@ -1,6 +1,6 @@
 name: "getservers"
 runner_type: "python-script"
-description: "This action will authenticate user, get token and populate keyvaluestore"
+description: "This action will retrieve all servers"
 enabled: true
 entry_point: "getservers.py"
 parameters:
