@@ -11,8 +11,8 @@ class InternalDelIntf(Action):
 	def run(self, serv_id, auth_ip):
 		i = 0
 		client = Client()
-		url = 'http://'+auth_ip+'/v2.1/'+{{st2kv.curr_project_id}}+'/servers'
-		headers = {'X-Auth-Token':{{st2kv.curr_token}} }
+		url = 'http://'+auth_ip+'/v2.1/'+{{st2kv.system.curr_project_id}}+'/servers'
+		headers = {'X-Auth-Token':{{st2kv.system.curr_token}} }
 		try:
 			r = requests.get(url, headers=headers)
 			token=r.json()
