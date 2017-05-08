@@ -1,0 +1,19 @@
+name: "getports"
+runner_type: "python-script"
+description: "This action will retrieve ports"
+enabled: true
+entry_point: "getports.py"
+parameters:
+    port_id:
+        type: "string"
+        description: "id port"
+        required: true
+        position: 0
+        default: "default"
+    auth_ip:
+        type: "string"
+        description: "Openstack host address."
+        required: true
+        position: 1
+
+
