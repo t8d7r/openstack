@@ -14,12 +14,8 @@ class InternalDelIntf(Action):
 		keys = client.keys.get_all()
 		proj_id = client.keys.get_by_name(name='curr_project_id')
 		curr_token = client.keys.get_by_name(name='curr_token')
-		print proj_id.value+'\n'
-		print curr_token.value+'\n'
 		url = 'http://'+auth_ip+':8774/v2.1/'+proj_id.value+'/servers'
-		print url+'\n'
 		headers = {'X-Auth-Token': curr_token.value }
-		print headers
 		try:
 			r = requests.get(url, headers=headers)
 			print r
@@ -31,7 +27,7 @@ class InternalDelIntf(Action):
 					i = i + 1
 			else :
 				while i < length :
-					if token['servers'][i]['id'] == serv_id :              
+					if token['servers'][i]['name'] == serv_id :              
  						print token['servers'][i]['name']+":"+token['servers'][i]['id']
                 			i = i + 1	
 		except:
