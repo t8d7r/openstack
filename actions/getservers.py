@@ -16,7 +16,7 @@ class InternalDelIntf(Action):
 		curr_token = client.keys.get_by_name(name='curr_token')
 		print proj_id.value+'\n'
 		print curr_token.value+'\n'
-		url = 'http://'+auth_ip+'/v2.1/'+proj_id.value+'/servers'
+		url = 'http://'+auth_ip+':8774/v2.1/'+proj_id.value+'/servers'
 		print url+'\n'
 		headers = {'X-Auth-Token': curr_token.value }
 		print headers
