@@ -1,14 +1,15 @@
-name: "serverpause"
+name: "getflavor"
 runner_type: "python-script"
-description: "This action will suspend server"
+description: "This action will retrieve flavor"
 enabled: true
-entry_point: "serverpause.py"
+entry_point: "getflavor.py"
 parameters:
-    serv_id:
+    flav_id:
         type: "string"
-        description: "Server id."
+        description: "id server"
         required: true
         position: 0
+        default: "default"
     auth_ip:
         type: "string"
         description: "Openstack host address."
